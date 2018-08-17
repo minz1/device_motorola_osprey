@@ -1,5 +1,5 @@
 # Copyright (C) 2015-2016 The CyanogenMod Project
-#               2017-2018 The LineageOS Project
+#           (C) 2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,6 +16,7 @@
 $(call inherit-product, device/motorola/osprey/full_osprey.mk)
 
 # Boot animation
+TARGET_BOOTANIMATION_HALF_RES := true
 TARGET_SCREEN_WIDTH := 720
 TARGET_SCREEN_HEIGHT := 1280
 
@@ -30,4 +31,4 @@ PRODUCT_RELEASE_NAME := osprey
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="osprey_reteu-user 6.0.1 MPIS24.107-55-2-12 9 release-keys"
 
-BUILD_FINGERPRINT=motorola/osprey_reteu/osprey_umts:6.0.1/MPIS24.107-55-2-12/9:user/release-keys
+BUILD_FINGERPRINT := motorola/osprey_reteu/osprey_umts:6.0.1/MPIS24.107-55-2-12/9:user/release-keys
