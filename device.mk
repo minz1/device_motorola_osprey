@@ -25,9 +25,20 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
     $(LOCAL_PATH)/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml
 
+
+PRODUCT_PROPERTY_OVERRIDES += \
+	persist.vendor.audio.fluence.mode=endfire \
+	persist.vendor.audio.fluence.voicecall=true \
+	ro.vendor.audio.sdk.fluencetype=fluence
+
 # Camera
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml
+
+# Display
+PRODUCT_PROPERTY_OVERRIDES += \
+	debug.hwui.use_buffer_age=false \
+	ro.sf.lcd_density=320
 
 # Media
 PRODUCT_COPY_FILES += \
